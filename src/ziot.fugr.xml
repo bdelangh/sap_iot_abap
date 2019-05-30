@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>IoT Function Modules</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZIOTTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZIOT</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_DAMAGEALERT_CREATE</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Create a Damage Alert</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>SENSOR</PARAMETER>
+       <DEFAULT>&apos;Sensor1&apos;</DEFAULT>
+       <TYP>ZSENSOR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PRIORITY</PARAMETER>
+       <DEFAULT>&apos;M&apos;</DEFAULT>
+       <TYP>ZPRIORITY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VIBRATIONLEVEL</PARAMETER>
+       <DEFAULT>99</DEFAULT>
+       <TYP>ZVIBRATION</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>RET_ALERTID</PARAMETER>
+       <TYP>ZALERTID</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SENSOR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sensor ID</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PRIORITY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Priority fpr Alert</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VIBRATIONLEVEL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vibration</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RET_ALERTID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>AlertID</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_DAMAGEALERT_SEND_EVENT</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Send a Damage Alert Event</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>SENSOR</PARAMETER>
+       <DEFAULT>&apos;SENSOR1&apos;</DEFAULT>
+       <TYP>ZSENSOR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PRIORITY</PARAMETER>
+       <DEFAULT>&apos;M&apos;</DEFAULT>
+       <TYP>ZPRIORITY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VIBRATIONLEVEL</PARAMETER>
+       <DEFAULT>99</DEFAULT>
+       <TYP>ZVIBRATION</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PO_ID</PARAMETER>
+       <DEFAULT>0300000147</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>SNWD_PO_ID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>EMAIL</PARAMETER>
+       <TYP>AD_SMTPADR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>ALERTID</PARAMETER>
+       <TYP>ZALERTID</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SENSOR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sensor ID</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PRIORITY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Priority fpr Alert</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VIBRATIONLEVEL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Vibration</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PO_ID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>EPM: Purchase Order Number</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EMAIL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>E-Mail Address</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ALERTID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>AlertID</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_IOTALERT_CREATE_PRIO</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Create IoT Alert with Priority</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>SENSOR</PARAMETER>
+       <TYP>ZSENSOR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VALUE</PARAMETER>
+       <TYP>ZALERTVALUE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PRIORITY</PARAMETER>
+       <TYP>ZPRIORITY</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>RET_ALERTID</PARAMETER>
+       <TYP>ZALERTID</TYP>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SENSOR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sensor ID</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VALUE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Alert Value</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PRIORITY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Priority for Alert</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RET_ALERTID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>AlertID</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_IOTALERT_SEND_EVENT</FUNCNAME>
+     <SHORT_TEXT>Send Mail for IoT Alert</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>ALERTID</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZALERTID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SENSOR</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZSENSOR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>EQUIPMENT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZEQUIPMENT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PRIORITY</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZPRIORITY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>ALERTTYPE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZALERTTYPE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VALUE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZALERTVALUE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>EMAIL</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>AD_SMTPADR</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>ALERTID</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>AlertID</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SENSOR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sensor ID</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EQUIPMENT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>EquipmentID</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PRIORITY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Priority for Alert</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ALERTTYPE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IoT Alert Type</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VALUE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Alert Value</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EMAIL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>E-Mail Address</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_TEMPALERT_CREATE</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Create a Temperature Alert</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>EQUIPMENT</PARAMETER>
+       <TYP>ZEQUIPMENT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SENSOR</PARAMETER>
+       <TYP>ZSENSOR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PRIORITY</PARAMETER>
+       <TYP>ZPRIORITY</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>TEMPERATURE</PARAMETER>
+       <TYP>ZTEMPERATURE</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBSTRUCT>BAPIRET2</DBSTRUCT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>EQUIPMENT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>EquipmentID</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SENSOR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Sensor ID</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PRIORITY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Priority fpr Alert</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TEMPERATURE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Temperature</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Return Parameter</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

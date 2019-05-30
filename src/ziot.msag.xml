@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZIOT</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>IoT Messages</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZIOT</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>Alert &amp;1 successfully created</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZIOT</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Could not determine AlertId</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZIOT</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Could not insert Temp Alert &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZIOT</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Could not convert to xstring</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZIOT</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Error send to Event Hub : &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZIOT</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Damage Alert send to Event Hub</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZIOT</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Could not insert IoT Alert &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZIOT</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>IoT Alert send to Event Hub</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>
