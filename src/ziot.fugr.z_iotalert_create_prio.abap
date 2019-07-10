@@ -48,6 +48,9 @@ endif.
 
 data: iotsensor type ziotsensor.
 
+"Translate sensor to capitals
+translate sensor to UPPER CASE.
+
 select single * from ziotsensor into ziotsensor where sensorid = sensor.
 
 new_alertid = old_alertid + 10.
